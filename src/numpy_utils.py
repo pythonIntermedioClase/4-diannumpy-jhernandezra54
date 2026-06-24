@@ -60,7 +60,12 @@ def describir_array(arr):
     """
     # TODO: imprime forma con arr.shape, tipo con arr.dtype,
     #       mínimo con arr.min() y máximo con arr.max()
-    pass
+    print(f"""
+            Forma : {arr.shape}
+            Tipo: {arr.dtype}
+            Mínimo: {arr.min()}
+            Máximo: {arr.max()}
+        """)
 
 
 def crear_array_declaraciones(valores_lista):
@@ -78,7 +83,7 @@ def crear_array_declaraciones(valores_lista):
         -> array([1000000., 500000., 2000000.])
     """
     # TODO: usa np.array con el parámetro dtype=np.float64
-    pass
+    return np.array(valores_lista, dtype=np.float64)
 
 
 def comparar_lista_vs_array(valores_lista):
@@ -100,12 +105,12 @@ def comparar_lista_vs_array(valores_lista):
         Array (operación directa):
           [285000.   161500.   ...  209000.  ]
     """
-    # TODO:
-    # 1. Calcula el IVA con ciclo for sobre valores_lista y guarda en iva_lista
-    # 2. Convierte valores_lista a array con np.array
-    # 3. Calcula el IVA multiplicando el array por 0.19 y guarda en iva_array
-    # 4. Imprime ambos resultados con etiquetas
-    pass
+    iva_lista = []
+    for i in range(len(valores_lista)):
+        iva_lista.append(valores_lista[i] * 0.19)
+    array_iva = crear_array_declaraciones(valores_lista)*0.19
+    print(f"El IVA calculado con Ciclo for es: {iva_lista}")
+    print(f"El IVA calculado con array de numpy es: {array_iva}")
 
 
 def filtrar_valores_en_rango(valores_lista, minimo, maximo):

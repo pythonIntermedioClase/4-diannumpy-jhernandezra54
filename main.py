@@ -51,20 +51,20 @@ def menu_arrays_y_tipos():
     print("\n--- Arrays y tipos de datos ---")
 
     # TODO: descomenta cuando hayas implementado describir_array
-    # print("\n  VALORES_DECLARADOS:")
-    # describir_array(VALORES_DECLARADOS)
-    # print("\n  DIAS_MORA:")
-    # describir_array(DIAS_MORA)
+    print("\n  VALORES_DECLARADOS:")
+    describir_array(VALORES_DECLARADOS)
+    print("\n  DIAS_MORA:")
+    describir_array(DIAS_MORA)
 
     # TODO: descomenta cuando hayas implementado crear_array_declaraciones
-    # lista = [1_200_000, 750_000, 3_100_000]
-    # arr = crear_array_declaraciones(lista)
-    # print(f"\n  Array creado desde lista: {arr}")
-    # print(f"  Tipo: {arr.dtype}")
+    lista = [1_200_000, 750_000, 3_100_000]
+    arr = crear_array_declaraciones(lista)
+    print(f"\n  Array creado desde lista: {arr}")
+    print(f"  Tipo: {arr.dtype}")
 
     # TODO: descomenta cuando hayas implementado comparar_lista_vs_array
-    # valores_lista = [1_500_000, 850_000, 2_300_000, 950_000]
-    # comparar_lista_vs_array(valores_lista)
+    valores_lista = [1_500_000, 850_000, 2_300_000, 950_000]
+    comparar_lista_vs_array(valores_lista)
 
     # TODO: descomenta cuando hayas implementado filtrar_valores_en_rango
     # valores_lista = [1_500_000, 850_000, 2_300_000, 950_000, 0, 3_200_000]
@@ -254,6 +254,16 @@ def main():
         else:
             print(f"\n  Opcion '{opcion}' no reconocida.")
 
+
+def explicacion():
+    lista = [10,15,17,20,22]
+    print(f"Los números a sumar son: {lista}")
+    suma_funcion_python = sum(lista)
+    print(f"El valor de la suma usando la funcion sum es: {suma_funcion_python}")
+    suma_acumulada = 0
+    for i in lista:
+        suma_acumulada += i
+    print(f"El valor de la suma usando el ciclo for es: {suma_acumulada}")
 
 if __name__ == "__main__":
     main()
