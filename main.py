@@ -67,9 +67,9 @@ def menu_arrays_y_tipos():
     comparar_lista_vs_array(valores_lista)
 
     # TODO: descomenta cuando hayas implementado filtrar_valores_en_rango
-    # valores_lista = [1_500_000, 850_000, 2_300_000, 950_000, 0, 3_200_000]
-    # en_rango = filtrar_valores_en_rango(valores_lista, 500_000, 2_000_000)
-    # print(f"\n  Valores entre 500.000 y 2.000.000: {en_rango}")
+    valores_lista = [1_500_000, 850_000, 2_300_000, 950_000, 0, 3_200_000]
+    en_rango = filtrar_valores_en_rango(valores_lista, 500_000, 2_000_000)
+    print(f"\n  Valores entre 500.000 y 2.000.000: {en_rango}")
 
     print("\n  (función pendiente de implementar)")
 

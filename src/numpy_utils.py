@@ -109,7 +109,7 @@ def comparar_lista_vs_array(valores_lista):
     for i in range(len(valores_lista)):
         iva_lista.append(valores_lista[i] * 0.19)
     array_iva = crear_array_declaraciones(valores_lista)*0.19
-    print(f"El IVA calculado con Ciclo for es: {iva_lista}")
+    print(f"El IVA calculado con ciclo for es: {iva_lista}")
     print(f"El IVA calculado con array de numpy es: {array_iva}")
 
 
@@ -138,7 +138,11 @@ def filtrar_valores_en_rango(valores_lista, minimo, maximo):
     # 2. Recorre valores_lista con un ciclo for
     # 3. Si minimo <= valor <= maximo, agrégalo con .append()
     # 4. Retorna la lista acumulada
-    pass
+    valores_filtrados = []
+    for i in range(len(valores_lista)):
+        if valores_lista[i] <= maximo and valores_lista[i] >= minimo:
+            valores_filtrados.append(valores_lista[i])
+    return valores_filtrados
 
 
 # ===========================================================================
