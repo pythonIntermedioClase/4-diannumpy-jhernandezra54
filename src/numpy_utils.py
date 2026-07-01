@@ -418,7 +418,7 @@ def obtener_mascara_mora(dias_mora):
         -> array([False,  True, False,  True])
     """
     # TODO: retorna dias_mora > 0
-    pass
+    return dias_mora > 0
 
 
 def filtrar_valores_con_mora(valores, dias_mora):
@@ -445,7 +445,8 @@ def filtrar_valores_con_mora(valores, dias_mora):
     # TODO:
     # 1. Crea la máscara: mascara = dias_mora > 0
     # 2. Retorna valores[mascara]
-    pass
+    mascara = dias_mora > 0
+    return valores[mascara]
 
 
 def contar_sobre_umbral(arr, umbral):
@@ -467,7 +468,9 @@ def contar_sobre_umbral(arr, umbral):
     # 1. Crea la máscara: mascara = arr > umbral
     # 2. Cuenta los True con cantidad = np.sum(mascara)
     # 3. Retorna int(cantidad)
-    pass
+    mascara = arr > umbral
+    cantidad = np.sum(mascara)
+    return int(cantidad)
 
 
 # ===========================================================================
@@ -524,7 +527,9 @@ def aplicar_descuento_vectorizado(valores, pagos_voluntarios):
     # 1. Guarda 0.90 en factor_descuento
     # 2. Calcula valores_con_descuento = valores * factor_descuento
     # 3. Retorna np.where(pagos_voluntarios, valores_con_descuento, valores)
-    pass
+    factor_descuento = 0.9
+    valores_con_descuento = valores * factor_descuento
+    return np.where(pagos_voluntarios, valores_con_descuento, valores)
 
 
 def calcular_sanciones_vectorizadas(valores, dias_mora):
