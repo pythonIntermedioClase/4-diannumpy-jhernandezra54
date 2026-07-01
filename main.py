@@ -149,34 +149,30 @@ def menu_vectorizacion():
     redondeados = redondear_a_miles(VALORES_DECLARADOS * 1.19)
     print(f"\n  Valores con IVA redondeados a miles: {redondeados}")
 
-    print("\n  (función pendiente de implementar)")
-
 
 def menu_ufuncs():
     """Sección 4: funciones universales."""
     print("\n--- Funciones universales ---")
 
     # TODO: descomenta cuando hayas implementado calcular_variacion_absoluta
-    # valores_anterior = np.array([
-    #     1_200_000, 900_000, 0, 2_100_000,
-    #     800_000, 3_000_000, 500_000, 1_000_000,
-    # ], dtype=np.float64)
-    # variacion = calcular_variacion_absoluta(VALORES_DECLARADOS, valores_anterior)
-    # print("\n  Variación absoluta respecto al período anterior:")
-    # for nit, var in zip(NITS, variacion):
-    #     print(f"  {nit} | ${var:>10,.0f}")
+    valores_anterior = np.array([
+        1_200_000, 900_000, 0, 2_100_000,
+        800_000, 3_000_000, 500_000, 1_000_000,
+    ], dtype=np.float64)
+    variacion = calcular_variacion_absoluta(VALORES_DECLARADOS, valores_anterior)
+    print("\n  Variación absoluta respecto al período anterior:")
+    for nit, var in zip(NITS, variacion):
+        print(f"  {nit} | ${var:>10,.0f}")
 
     # TODO: descomenta cuando hayas implementado normalizar_valores
-    # normalizados = normalizar_valores(VALORES_DECLARADOS)
-    # print("\n  Valores normalizados [0-1]:")
-    # for nit, norm in zip(NITS, normalizados):
-    #     print(f"  {nit} | {norm:.3f}")
+    normalizados = normalizar_valores(VALORES_DECLARADOS)
+    print("\n  Valores normalizados [0-1]:")
+    for nit, norm in zip(NITS, normalizados):
+        print(f"  {nit} | {norm:.3f}")
 
     # TODO: descomenta cuando hayas implementado aplicar_raiz_cuadrada
-    # raices = aplicar_raiz_cuadrada(VALORES_DECLARADOS)
-    # print(f"\n  Raíz cuadrada (primeros 3): {raices[:3]}")
-
-    print("\n  (función pendiente de implementar)")
+    raices = aplicar_raiz_cuadrada(VALORES_DECLARADOS)
+    print(f"\n  Raíz cuadrada (primeros 3): {raices[:3]}")
 
 
 def menu_boolean_arrays():
