@@ -229,7 +229,7 @@ def calcular_iva_todos(valores, tasa=0.19):
         -> array([190000.,  95000.])
     """
     # TODO: retorna valores * tasa (una sola operación, sin ciclo)
-    pass
+    return valores*tasa
 
 
 def calcular_valor_con_iva(valores, tasa=0.19):
@@ -250,7 +250,8 @@ def calcular_valor_con_iva(valores, tasa=0.19):
     # TODO:
     # 1. Guarda 1 + tasa en una variable factor_con_iva
     # 2. Retorna valores * factor_con_iva
-    pass
+    factor_con_iva = 1+tasa
+    return valores * factor_con_iva
 
 
 def redondear_a_miles(arr):
@@ -271,7 +272,9 @@ def redondear_a_miles(arr):
     # 1. Divide arr entre 1000 y guarda en valor_en_miles
     # 2. Aplica np.round a valor_en_miles y guarda en miles_redondeados
     # 3. Retorna miles_redondeados * 1000
-    pass
+    valor_en_miles = arr/1000
+    miles_redondeados = np.round(valor_en_miles)
+    return miles_redondeados * 1000
 
 
 # ===========================================================================
